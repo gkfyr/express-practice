@@ -1,8 +1,10 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT;
 
 // MongoDB Atlas 연결 설정 (연결 문자열을 자신의 것으로 변경)
 const mongoURI = process.env.MONGO_URI;
